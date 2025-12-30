@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from '../Framer/Reveal';
 
 import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
@@ -11,26 +12,28 @@ const Projects = () => (
     <GridContainer>
       {projects.map((p, i) => {
         return (
-          <BlogCard key={i}>
-          <Img src={p.image} />
-            <TitleContent>
-              <HeaderThree title>{p.title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo className="card-info">{p.description}</CardInfo>
-            <div>
-              <TitleContent>Stack</TitleContent>
-              <TagList>
-                {p.tags.map((t, i) => {
-                  return <Tag key={i}>{t}</Tag>;
-                })}
-              </TagList>
-            </div>
-            <UtilityList>
-              <ExternalLinks href={p.source}>Code</ExternalLinks>
-              <ExternalLinks href={p.visit}>Visit</ExternalLinks>
-            </UtilityList>
-          </BlogCard>
+          <Reveal key={i}>
+            <BlogCard>
+              <Img src={p.image} />
+              <TitleContent>
+                <HeaderThree title>{p.title}</HeaderThree>
+                <Hr />
+              </TitleContent>
+              <CardInfo className="card-info">{p.description}</CardInfo>
+              <div>
+                <TitleContent>Stack</TitleContent>
+                <TagList>
+                  {p.tags.map((t, i) => {
+                    return <Tag key={i}>{t}</Tag>;
+                  })}
+                </TagList>
+              </div>
+              <UtilityList>
+                <ExternalLinks href={p.source}>Code</ExternalLinks>
+                <ExternalLinks href={p.visit}>Visit</ExternalLinks>
+              </UtilityList>
+            </BlogCard>
+          </Reveal>
         );
       })}
     </GridContainer>

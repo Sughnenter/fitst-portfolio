@@ -1,24 +1,27 @@
 import React from 'react';
+import Reveal from '../Framer/Reveal';
 
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
 
 const Hero = () => (
-      <>
-        <Section row nopadding>
-          <LeftSection>
-            <SectionTitle main center>
-              Welcome To <br />
-              My Personal Portfolio
-            </SectionTitle>
-            <SectionText>
+  <>
+    <Reveal>
+      <Section row nopadding>
+        <LeftSection>
+          <SectionTitle main center>
+            Welcome To <br />
+            My Personal Portfolio
+          </SectionTitle>
+          <SectionText>
             Hi, I&apos;m Shammah a knowledge hungry and passion driven passion driven software engineer always striving to be better, I build secure backend api as well as stunning responsive websites
-            </SectionText>
-            <Button onClick={() => window.location ='mailto:shamaj2006@gmail.com'}>Contact me</Button>
-          </LeftSection>
-        </Section>
-      </>
+          </SectionText>
+          <Button onClick={() => window.location = 'mailto:shamaj2006@gmail.com'}>Contact me</Button>
+        </LeftSection>
+      </Section>
+    </Reveal>
+  </>
 
   // <Section row nopadding>
   //   <LeftSection>
