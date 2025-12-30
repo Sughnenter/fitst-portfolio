@@ -17,7 +17,9 @@ export const Section = styled.section`
 
   @media ${({ theme }) => theme.breakpoints.sm} {
     padding: ${({ $nopadding }) => ($nopadding ? "0" : "16px 16px 0")};
-    width: calc(100vw - 32px);
+    /* Use full width with box-sizing to avoid horizontal overflow from scrollbars */
+    width: 100%;
+    box-sizing: border-box;
     flex-direction: column;
   }
 `;
@@ -83,9 +85,9 @@ export const SectionDivider = styled.div`
   border-radius: 10px;
   background-color: #fff;
   background: ${({ $colorAlt }) =>
-  $colorAlt
-    ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)'
-    : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+    $colorAlt
+      ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)'
+      : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
 
 margin: ${({ $divider }) => ($divider ? "4rem 0" : "0")};
 

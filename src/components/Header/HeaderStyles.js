@@ -35,8 +35,12 @@ export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 2 / 2 / 3 / 5;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
   }
 `;
 export const Div3 = styled.div`
@@ -63,6 +67,7 @@ export const NavLink = styled.a`
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -125,5 +130,17 @@ border-radius: 50px;
     transform: scale(1.2);
     cursor: pointer;
     
+  }
+  svg {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 6px;
+    svg {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
   }
 `

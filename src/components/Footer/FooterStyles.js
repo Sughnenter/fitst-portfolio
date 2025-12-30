@@ -1,16 +1,18 @@
 import styled from "styled-components"
 
 export const FooterWrapper = styled.section`
-	width: calc(100vw - 96px);
-  max-width: 1040px;
-  padding: 2rem 48px 40px;
-  margin: 1rem auto;
-  box-sizing: content-box;
+	/* Use full width and rely on max-width and padding; avoid calc(100vw - ...) which can overflow */
+	width: 100%;
+	max-width: 1040px;
+	padding: 2rem 48px 40px;
+	margin: 1rem auto;
+	box-sizing: border-box;
 
 
   @media ${props => props.theme.breakpoints.sm} {
-    padding: 0 16px 48px;
-    width: calc(100vw - 32px);
+		padding: 0 16px 48px;
+		width: 100%;
+		box-sizing: border-box;
   }
 `
 
