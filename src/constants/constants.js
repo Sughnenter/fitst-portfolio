@@ -11,7 +11,7 @@ export const projects = [
   {
     title: 'Genricht ',
     description:"Using React Html and css as well as a figma design i built this landing page or single page application for a resturant called genricht, it has various sections and quotes, as well as a menu and photo gallery, ",
-    image: '/images/Genricht.png',
+    image: '/images/genricht.png',
     tags: ['React', 'JavaScript'],
     source: 'https://github.com/Sughnenter/resturant-spa',
     visit: 'https://Genricht-fine-dining.onrender.com',
@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'HooBank',
     description: "Built this whils taking a lesson from JavaScript Mastery course, it is a landing page for a bank called hoobank which is the next generation payment system, it uses css primarily for styling",
-      image: '/images/hoobank.png',
+      image: '/images/hooBank.png',
       tags: ['React', 'JavaScript', 'tailwindcss'],
     source: 'https://github.com/Sughnenter/hooBank-project',
     visit: 'https://hoobank-s44v.onrender.com',
